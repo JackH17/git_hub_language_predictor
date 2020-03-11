@@ -19,7 +19,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: rgb(224, 212, 214);
+    background-color: rgba(170, 125, 163, 0.466);
     font-family: 'Source Sans Pro', sans-serif;
 }
 
@@ -45,17 +45,17 @@
 .avatar-style {
     width: 225px;
     height: 225px;
-    border-color: black;
-    border-style: double;
+    border-color: rgba(172, 137, 156, 0.548);
+    border-style: solid;
     padding: 3px;
     border-width: 5px;
-    box-shadow: 2px 2px 40px 2px rgba(0,0,0,0.26);
+    box-shadow: 2px 2px 40px 2px rgba(221, 221, 213, 0.164);
 }
 
 .container-one {
     flex: 1;
     width: 50%;
-    border-bottom-color: black;
+    border-bottom-color: rgba(172, 137, 156, 0.548);;
     border-bottom-style: solid;
     border-bottom-width: 3px;
     margin-top: 20px;
@@ -66,6 +66,10 @@
     justify-content: center;
 }
 
+.user-name {
+    margin-bottom: 15px;
+}
+
 .container-two {
     flex: 1;
     display: flex;
@@ -73,10 +77,9 @@
     justify-content: space-between;
     align-items: center;
     width: 50%;
-    border-bottom-color: black;
+    border-bottom-color: rgba(172, 137, 156, 0.548);;
     border-bottom-style: solid;
     border-bottom-width: 3px;
-    margin-bottom: 20px;
     padding: 10px;
 }
 
@@ -85,7 +88,7 @@
     flex: 1;
     width: 50%;
     padding: 10px;
-    border-bottom-color: black;
+    border-bottom-color: rgba(172, 137, 156, 0.548);
     border-bottom-style: solid;
     border-bottom-width: 3px;
     display: flex;
@@ -97,6 +100,10 @@
 .graph-label {
     padding: 10px;
     text-shadow: 4px 7px 20px rgba(180, 175, 175, 0.1);
+}
+
+.graph-sub {
+    padding: 5px;
 }
 
 .form-title {

@@ -1,16 +1,17 @@
 <div class="wrapper">
     <div class="container-one">
         <h1><%= $username %></h1>
-        <p>Predicted favourite language is <%=$fav_lang%></p>
+        <h3>Predicted favourite language is <%=$fav_lang%></h3>
     </div>
    
     <div class="container-two">
 
         <div>
-        <p>
-            <% if $userInfo["name"] %>
-                <%= $userInfo["name"]%>
-            <% end %></p>
+            <h3 class="user-name">
+                <% if $userInfo["name"] %>
+                    <%= $userInfo["name"]%>
+                <% end %>
+            </h3>
 
             <p>Currently has
             <%= $userInfo["followers"]%>
@@ -31,9 +32,9 @@
         </div>
 
     </div>
-        
-
     <div class="container-five">
+
+        <h4 class="graph-sub"><%= $username %>'s most recent repos</h4>
        
         <% if $splitObj[1] %>
             <div style="
@@ -81,14 +82,9 @@
             </div>
         <% end %>    
     </div>
-    
-
-   
-    
-
-
-    
-    <p><%= link_to "Why not check out their git Hub Profile!", "#{$userInfo["git_hub_link"]}", :target => "#{$userInfo["git_hub_link"]}" %> or <%= link_to 'Try Another!', new_path %></p>
+    <div>
+        <p><%= link_to "Why not check out their git Hub Profile!", "#{$userInfo["git_hub_link"]}", :target => "#{$userInfo["git_hub_link"]}" %> or <%= link_to 'Try Another!', new_path %></p>
+    </div> 
 </div>
 
 
