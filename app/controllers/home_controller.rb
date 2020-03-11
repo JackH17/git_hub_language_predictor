@@ -23,8 +23,6 @@ class HomeController < ApplicationController
 
     $userInfo = user["body"]
 
-    $success = true
-
     $userRepos = getRepos($userInfo["repos"])
 
     @top_languages = {}
@@ -256,62 +254,5 @@ class HomeController < ApplicationController
 
   def index
 
-    # userRepos = self.getRepos
-
-    # @top_languages = {}
-
-    # languages = {}
-
-    # count = 0
-
-
-    # for i in userRepos
-    #   if languages[i["language"]]
-    #     languages[i["language"]] = languages[i["language"]] + 1
-    #   else 
-    #     languages[i["language"]] = 1
-    #   end
-    # end
-
-    # numberOfRepos = []
-
-    # languages.each_value {|val| numberOfRepos << val}
-
-    # sortedRepos = numberOfRepos.sort.reverse
-
-    # @numberOfLanguages = sortedRepos.length()
-    
-    # puts @numberOfLanguages
-
   end
-
-  # def getRepos
-
-  #   count = 1
-
-  #   stop = false
-
-  #   allRepos = []
-
-  #   until stop do 
-
-  #     userRepos = "https://api.github.com/users/jackh17/repos?page=#{count}"
-
-  #     count = count + 1
-
-  #     pageRepos = JSON.parse(RestClient.get(userRepos))
-
-  #     allRepos.concat(pageRepos)
-
-  #     if pageRepos.length() < 30 || pageRepos.length() === 0
-  #       stop = !stop
-  #     end
-
-  #   end
-
-  #   return allRepos
-
-  # end
-
-
 end
