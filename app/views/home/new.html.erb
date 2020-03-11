@@ -1,0 +1,26 @@
+<div class="wrapper">
+
+        <div class="form-title">
+                <h1>Find Friend via Git Hub username</h1>
+        </div>
+        
+        <div class="error-message">
+                <% flash.each do |type, msg| %>
+                        <div>
+                                <%= msg %>
+                        </div>
+                <% end %>
+        </div>
+        <div>
+                <%= form_with url: '/search' do %>
+
+                        <%= text_field_tag :username %>
+                        <%= submit_tag("Search") %>
+
+                <% end %>
+        </div>
+
+        
+
+        
+</div>

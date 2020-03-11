@@ -1,0 +1,95 @@
+<div class="wrapper">
+    <div class="container-one">
+        <h1><%= $username %></h1>
+        <p>Predicted favourite language is <%=$fav_lang%></p>
+    </div>
+   
+    <div class="container-two">
+
+        <div>
+        <p>
+            <% if $userInfo["name"] %>
+                <%= $userInfo["name"]%>
+            <% end %></p>
+
+            <p>Currently has
+            <%= $userInfo["followers"]%>
+            <% if $userInfo["followers"] === 1 %>
+                follower
+            <% else %>
+                followers
+            <% end %>
+            </p>
+        
+            <p>Total number of repositries is <%= $userInfo["number_of_repos"]%></p>
+        
+            <p>An active Git Hub member since <%= $userInfo["member_since"]%></p>
+        </div>
+
+        <div class="avatar">
+            <%= image_tag "#{$userInfo["avatar"]}", :class => "avatar-style"%>
+        </div>
+
+    </div>
+        
+
+    <div class="container-five">
+       
+        <% if $splitObj[1] %>
+            <div style="
+            width: <%=$styleOne%>%;
+            ">
+                <div 
+                    style="
+                    background-color: #FC6E5F;
+                    animation: graphGrow 4s;
+                    border-radius: 5px;
+                    box-shadow: 20px 18px 40px -5px rgba(0,0,0,0.2);
+                    ">
+                    <h1 class="graph-label"><%= $splitObj[1]["language"]%><h1>
+                </div>
+            </div>
+        <% end %>
+        <% if $splitObj[2] %>
+            <div style="
+            width: <%=$styleTwo%>%;
+            ">
+                <div 
+                    style="
+                    background-color:pink;
+                    animation: graphGrow 4s;
+                    border-radius: 5px;
+                    box-shadow: 20px 18px 40px -5px rgba(0,0,0,0.2);
+                    ">
+                    <h1 class="graph-label"><%= $splitObj[2]["language"]%><h1>
+                </div>
+            </div>
+        <% end %>
+        <% if $splitObj[3] %>
+            <div style="
+            width: <%=$styleThree%>%;
+            ">
+                <div 
+                    style="
+                    background-color: #F8F85B;
+                    animation: graphGrow 4s;
+                    border-radius: 5px;
+                    box-shadow: 20px 18px 40px -5px rgba(0,0,0,0.2);
+                    ">
+                    <h1 class="graph-label"><%= $splitObj[3]["language"]%><h1>
+                </div>
+            </div>
+        <% end %>    
+    </div>
+    
+
+   
+    
+
+
+    
+    <p><%= link_to "Why not check out their git Hub Profile!", "#{$userInfo["git_hub_link"]}", :target => "#{$userInfo["git_hub_link"]}" %> or <%= link_to 'Try Another!', new_path %></p>
+</div>
+
+
+
